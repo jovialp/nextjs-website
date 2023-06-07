@@ -6,7 +6,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -18,7 +18,7 @@ import { textVariant } from "../utils/motion";
 type ExperianceType = {
   title: string,
   company_name: string,
-  icon: string,
+  icon: StaticImageData,
   iconBg: string,
   date: string,
   points: string[],
@@ -80,7 +80,7 @@ const Experience = () => {
         </h2>
       </motion.div>
 
-      {/* <div className="mt-20 flex flex-col">
+      <div className="mt-20 flex flex-col">
         <VerticalTimeline>
           {experiences.map((experience, index) => (
             <ExperienceCard
@@ -89,7 +89,7 @@ const Experience = () => {
             />
           ))}
         </VerticalTimeline>
-      </div> */}
+      </div>
     </>
   );
 };
